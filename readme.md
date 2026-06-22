@@ -1,56 +1,109 @@
-# Unfold
+# 🚀 Unfold
 
-A full-stack platform to explore internet events, creators, brands, and controversies through searchable timelines and categorized stories. Built with Next.js, TypeScript, MongoDB Atlas, Tailwind CSS, and a custom admin CMS.
+> Follow the full story behind internet events, creators, brands and trends.
 
-## Features
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue)
+![MongoDB](https://img.shields.io/badge/MongoDB-green)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8)
+
+🌐 Live Demo: https://your-vercel-url.vercel.app
+
+---
+
+## 📖 About
+
+Unfold is a full-stack platform that helps users understand internet events, creators, brands and controversies through searchable timelines and categorized stories.
+
+It also includes a custom CMS that allows administrators to manage content.
+
+---
+
+## ✨ Features
 
 ### Public Website
 
 - Homepage
-- Featured Story
-- Trending Today
 - Search Engine
-- Category Filters
+- Featured Stories
+- Trending Today
 - Dynamic Story Pages
+- Category Pages
+- Responsive Design
+- Dark Theme
 
 ### Admin CMS
 
-- Admin Login
+- Secure Login
+- Admin Access Key
 - Dashboard
 - Add Story
 - Edit Story
 - Delete Story
 - Timeline Editor
 
-### Tech Stack
+---
 
-Frontend:
+## 🛠️ Tech Stack
+
+Frontend
+
 - Next.js
 - React
 - TypeScript
 - Tailwind CSS
 
-Backend:
+Backend
+
 - Next.js API Routes
 - MongoDB Atlas
 - Mongoose
 
-## Run locally
+Deployment
+
+- Vercel
+
+---
+
+## 🚀 Run Locally
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Run development server
+
+```bash
 npm run dev
 ```
 
-Create a `.env.local`:
+Create `.env.local`
 
 ```env
 MONGODB_URI=
 JWT_SECRET=
 ADMIN_EMAIL=
 ADMIN_PASSWORD=
+ADMIN_ACCESS_KEY=
 ```
-## License
+
+---
+
+## 📸 Screenshots
+
+(Add screenshots here)
+
+---
+
+## 👨‍💻 Author
+
+Hardik Guwalani
+
+---
+
+## 📜 License
 
 © 2026 Hardik Guwalani. All Rights Reserved.
 
