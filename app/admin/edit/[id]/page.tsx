@@ -52,23 +52,23 @@ export default function EditStoryPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#F4F1EB] text-[#1F2937]">
+    <main className="min-h-screen bg-[#0F1117] text-[#F8FAFC]">
       <section className="max-w-4xl mx-auto px-4 md:px-8 py-10 md:py-16">
         <h1 className="text-5xl font-extrabold">Edit Story</h1>
 
         <form onSubmit={handleUpdate} className="mt-10 space-y-5">
-          <input className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <input className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" value={slug} onChange={(e) => setSlug(e.target.value)} />
-          <textarea rows={3} className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" value={summary} onChange={(e) => setSummary(e.target.value)} />
-          <textarea rows={8} className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" value={article} onChange={(e) => setArticle(e.target.value)} />
-          <input className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" value={category} onChange={(e) => setCategory(e.target.value)} />
+          <input className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" value={slug} onChange={(e) => setSlug(e.target.value)} />
+          <textarea rows={3} className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" value={summary} onChange={(e) => setSummary(e.target.value)} />
+          <textarea rows={8} className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" value={article} onChange={(e) => setArticle(e.target.value)} />
+          <input className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" value={category} onChange={(e) => setCategory(e.target.value)} />
 
           <label className="flex items-center gap-3">
             <input type="checkbox" checked={isTrendingToday} onChange={(e) => setIsTrendingToday(e.target.checked)} />
             Trending Today
           </label>
 
-          <button className="rounded-3xl bg-[#B16A3B] px-8 py-4 text-white font-semibold">
+          <button className="rounded-3xl bg-[#F59E0B] px-8 py-4 text-[#0F1117] font-semibold hover:bg-[#D97706] transition">
             Update Story
           </button>
         </form>

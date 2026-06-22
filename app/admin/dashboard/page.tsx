@@ -13,11 +13,11 @@ export default function AdminDashboard() {
   }, [router]);
 
   return (
-    <main className="min-h-screen bg-[#F4F1EB] text-[#1F2937]">
+    <main className="min-h-screen bg-[#0F1117] text-[#F8FAFC]">
       <section className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-16">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <p className="uppercase tracking-[0.3em] text-sm text-gray-500">Admin</p>
+            <p className="uppercase tracking-[0.3em] text-sm text-[#64748B]">Admin</p>
             <h1 className="mt-4 text-5xl font-extrabold">Dashboard</h1>
           </div>
 
@@ -26,32 +26,32 @@ export default function AdminDashboard() {
               localStorage.removeItem("adminToken");
               router.push("/admin/login");
             }}
-            className="rounded-2xl bg-[#B16A3B] px-6 py-3 text-white font-semibold"
+            className="rounded-2xl bg-[#F59E0B] px-6 py-3 text-[#0F1117] font-semibold hover:bg-[#D97706] transition"
           >
             Logout
           </button>
         </div>
 
-        <p className="mt-4 text-lg text-gray-600">Manage stories, timelines, sources and daily pulse.</p>
+        <p className="mt-4 text-lg text-[#94A3B8]">Manage stories, timelines, sources and daily pulse.</p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link href="/admin/add">
-            <div className="rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-8 cursor-pointer hover:shadow-md transition">
+            <div className="rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] p-8 cursor-pointer hover:border-[#F59E0B] hover:shadow-lg transition">
               <h2 className="text-2xl font-bold">Add Story</h2>
-              <p className="mt-3 text-gray-600">Create a new internet event.</p>
+              <p className="mt-3 text-[#94A3B8]">Create a new internet event.</p>
             </div>
           </Link>
 
           <Link href="/admin/stories">
-            <div className="rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-8 cursor-pointer hover:shadow-md transition">
+            <div className="rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] p-8 cursor-pointer hover:border-[#F59E0B] hover:shadow-lg transition">
               <h2 className="text-2xl font-bold">Manage Stories</h2>
-              <p className="mt-3 text-gray-600">Edit existing stories.</p>
+              <p className="mt-3 text-[#94A3B8]">Edit existing stories.</p>
             </div>
           </Link>
 
-          <div className="rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-8">
+          <div className="rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] p-8">
             <h2 className="text-2xl font-bold">Daily Pulse</h2>
-            <p className="mt-3 text-gray-600">Choose today’s featured stories.</p>
+            <p className="mt-3 text-[#94A3B8]">Choose today’s featured stories.</p>
           </div>
         </div>
       </section>

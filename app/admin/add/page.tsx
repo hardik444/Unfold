@@ -56,18 +56,18 @@ export default function AddStoryPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#F4F1EB] text-[#1F2937]">
+    <main className="min-h-screen bg-[#0F1117] text-[#F8FAFC]">
       <section className="max-w-4xl mx-auto px-4 md:px-8 py-10 md:py-16">
-        <p className="uppercase tracking-[0.35em] text-sm text-gray-500">Unfold CMS</p>
+        <p className="uppercase tracking-[0.35em] text-sm text-[#64748B]">Unfold CMS</p>
         <h1 className="mt-4 text-5xl font-extrabold">Add Story</h1>
 
         <form onSubmit={handleSubmit} className="mt-10 space-y-5">
-          <input className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" placeholder="Story Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <input className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" placeholder="Slug" value={slug} onChange={(e) => setSlug(e.target.value)} />
-          <textarea rows={3} className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" placeholder="Summary" value={summary} onChange={(e) => setSummary(e.target.value)} />
-          <textarea rows={8} className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" placeholder="Full Article" value={article} onChange={(e) => setArticle(e.target.value)} />
-          <input className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
-          <input className="w-full rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-4" placeholder="Tags (comma separated)" value={tags} onChange={(e) => setTags(e.target.value)} />
+          <input className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" placeholder="Story Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" placeholder="Slug" value={slug} onChange={(e) => setSlug(e.target.value)} />
+          <textarea rows={3} className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" placeholder="Summary" value={summary} onChange={(e) => setSummary(e.target.value)} />
+          <textarea rows={8} className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" placeholder="Full Article" value={article} onChange={(e) => setArticle(e.target.value)} />
+          <input className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
+          <input className="w-full rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none" placeholder="Tags (comma separated)" value={tags} onChange={(e) => setTags(e.target.value)} />
 
           <label className="flex items-center gap-3">
             <input type="checkbox" checked={isTrendingToday} onChange={(e) => setIsTrendingToday(e.target.checked)} />
@@ -78,10 +78,10 @@ export default function AddStoryPage() {
             <h2 className="text-2xl font-bold">Timeline</h2>
 
             {timeline.map((item, index) => (
-              <div key={index} className="rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-6 space-y-4">
+              <div key={index} className="rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] p-6 space-y-4">
                 <input
                   placeholder="Date"
-                  className="w-full rounded-2xl border border-[#E5DED3] p-4"
+                  className="w-full rounded-2xl border border-[#2A2F3A] bg-[#0F1117] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none"
                   value={item.date}
                   onChange={(e) => {
                     const updated = [...timeline];
@@ -92,7 +92,7 @@ export default function AddStoryPage() {
 
                 <input
                   placeholder="Event title"
-                  className="w-full rounded-2xl border border-[#E5DED3] p-4"
+                  className="w-full rounded-2xl border border-[#2A2F3A] bg-[#0F1117] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none"
                   value={item.title}
                   onChange={(e) => {
                     const updated = [...timeline];
@@ -104,7 +104,7 @@ export default function AddStoryPage() {
                 <textarea
                   placeholder="Description"
                   rows={3}
-                  className="w-full rounded-2xl border border-[#E5DED3] p-4"
+                  className="w-full rounded-2xl border border-[#2A2F3A] bg-[#0F1117] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none"
                   value={item.description}
                   onChange={(e) => {
                     const updated = [...timeline];
@@ -115,12 +115,12 @@ export default function AddStoryPage() {
               </div>
             ))}
 
-            <button type="button" onClick={addTimeline} className="rounded-2xl bg-[#1F2937] px-6 py-3 text-white">
+            <button type="button" onClick={addTimeline} className="rounded-2xl bg-[#1A1D24] border border-[#2A2F3A] text-[#F8FAFC] px-6 py-3 hover:border-[#F59E0B] transition">
               + Add Timeline Event
             </button>
           </div>
 
-          <button className="rounded-3xl bg-[#B16A3B] px-8 py-4 text-white font-semibold">
+          <button className="rounded-3xl bg-[#F59E0B] px-8 py-4 text-[#0F1117] font-semibold hover:bg-[#D97706] transition">
             Publish Story
           </button>
         </form>

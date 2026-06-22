@@ -34,29 +34,29 @@ export default function AdminStoriesPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#F4F1EB] text-[#1F2937]">
+    <main className="min-h-screen bg-[#0F1117] text-[#F8FAFC]">
       <section className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-16">
         <h1 className="text-5xl font-extrabold">Manage Stories</h1>
 
         <div className="mt-10 space-y-6">
           {stories.length === 0 ? (
-            <div className="rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-8">
+            <div className="rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] p-8 text-[#94A3B8]">
               No stories yet.
             </div>
           ) : (
             stories.map((story) => (
-              <div key={story._id} className="rounded-3xl border border-[#E5DED3] bg-[#FCFAF7] p-8">
+              <div key={story._id} className="rounded-3xl border border-[#2A2F3A] bg-[#1A1D24] p-8">
                 <h2 className="text-2xl font-bold">{story.title}</h2>
-                <p className="mt-3 text-gray-600">{story.summary}</p>
+                <p className="mt-3 text-[#94A3B8]">{story.summary}</p>
 
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link href={`/admin/edit/${story._id}`}>
-                    <button className="rounded-2xl bg-[#B16A3B] px-6 py-3 text-white">
+                    <button className="rounded-2xl bg-[#F59E0B] px-6 py-3 text-[#0F1117] hover:bg-[#D97706] transition">
                       Edit
                     </button>
                   </Link>
 
-                  <button onClick={() => deleteStory(story._id)} className="rounded-2xl bg-red-500 px-6 py-3 text-white">
+                  <button onClick={() => deleteStory(story._id)} className="rounded-2xl bg-[#1A1D24] border border-[#2A2F3A] px-6 py-3 text-[#F8FAFC] hover:border-[#F59E0B] hover:text-[#F59E0B] transition">
                     Delete
                   </button>
                 </div>
