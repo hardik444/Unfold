@@ -27,9 +27,6 @@ export default function Navbar() {
             Search
           </Link>
 
-          <Link href="/admin/dashboard" className="hover:text-[#F59E0B]">
-            Admin
-          </Link>
         </div>
       </div>
     </nav>

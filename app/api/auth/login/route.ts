@@ -2,8 +2,17 @@ import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 
 export async function POST(req: Request) {
-  const { email, password } = await req.json();
+  const { email, password, accessKey } = await req.json();
 
+  if (accessKey !== process.env.ADMIN_ACCESS_KEY) {
+    return Response.json(
+      {
+        success: false,
+        message: "Invalid access key",
+      },
+      { status: 401 }
+    );
+  }
   if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
     const token = jwt.sign(
       { role: "admin", email },

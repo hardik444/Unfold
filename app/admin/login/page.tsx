@@ -7,6 +7,7 @@ export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [accessKey, setAccessKey] = useState("");
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -14,7 +15,7 @@ export default function LoginPage() {
     const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password, accessKey }),
     });
 
     if (!res.ok) {
@@ -52,6 +53,13 @@ export default function LoginPage() {
           className="mt-4 w-full rounded-2xl border border-[#2A2F3A] bg-[#0F1117] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Admin Access Key"
+          value={accessKey}
+          onChange={(e) => setAccessKey(e.target.value)}
+          className="mt-4 w-full rounded-2xl border border-[#2A2F3A] bg-[#0F1117] text-[#F8FAFC] placeholder:text-[#64748B] p-4 focus:border-[#F59E0B] outline-none"
         />
 
         <button className="mt-8 w-full rounded-2xl bg-[#F59E0B] py-4 text-[#0F1117] font-semibold hover:bg-[#D97706] transition">
