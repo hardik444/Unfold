@@ -50,3 +50,8 @@ JWT_SECRET=
 ADMIN_EMAIL=
 ADMIN_PASSWORD=
 ```
+## License
+
+© 2026 Hardik Guwalani. All Rights Reserved.
+
+This repository is provided for portfolio and demonstration purposes only. Reuse, redistribution, or commercial use without permission is prohibited.
