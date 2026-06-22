@@ -1,6 +1,6 @@
 # Unfold
 
-Unfold is a modern internet events archive that helps users understand the full story behind creators, brands, trends, and online controversies.
+A full-stack platform to explore internet events, creators, brands, and controversies through searchable timelines and categorized stories. Built with Next.js, TypeScript, MongoDB Atlas, Tailwind CSS, and a custom admin CMS.
 
 ## Features
 
